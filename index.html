@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Morte | Bea Duarte</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="lua vermelha.jpg">
+
+</head>
+
+<body>
+
+    <header>
+        <p class="simbolos">☾ ✦ ⛤ ✦ ☽</p>
+
+        <h1>Morte</h1>
+        <h2>Bea Duarte</h2>
+
+        <p class="subtitulo">† Carta XVIII, vou renascer †</p>
+    </header>
+
+    <!-- Player de música -->
+    <div class="player-musica">
+        <img src="darte.jpg" alt="Capa da música" id="capa">
+
+        <div class="controles">
+            <p>Morte</p>
+            <span>Bea Duarte</span>
+
+            <audio id="musica" controls>
+                <source src="08. Morte - Bea Duarte.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- Letra -->
+        <section class="letra">
+            <h2>⛤ Letra ⛤</h2>
+
+            <div class="texto-letra">
+                
+<p>
+Vou cair como um anjo<br>
+Que não soube obedecer<br>
+Se cair, me levanto<br>
+Carta treze, vou renascer<br>
+
+Morte, vem pra limpar<br>
+Tudo que não pode ficar<br>
+
+É tão linda<br>
+O jeito que leva<br>
+Tudo o que tem que acabar<br>
+Nossa sina<br>
+Nem tudo começa<br>
+Mas tudo tem que acabar<br>
+
+Tento não chorar<br>
+Quando você chamar<br>
+Me espera<br>
+Que eu vou chegar lá<br>
+
+Vou subir como um santo (ah)<br>
+A jornada é longa<br>
+Vou queimar com o bando<br>
+Como pagãos na fogueira eu ando<br>
+
+Morte, vem libertar<br>
+Das ideias que vem amarrar<br>
+
+É tão linda<br>
+O jeito que leva<br>
+Tudo o que tem que acabar<br>
+Nossa sina<br>
+Nem tudo começa<br>
+Mas tudo tem que acabar<br>
+
+Tento não chorar<br>
+Quando você chamar<br>
+Me espera<br>
+
+Tenho pressa de viver<br>
+Tenho calma pra fazer<br>
+Eu não busco o fim<br>
+Mas sei que ele busca por mim<br>
+Mal comecei a jornada<br>
+Desde louco<br>
+Eu sabia que ia terminar<br>
+Todas as cartas na mesa<br>
+E elas me levam pro mesmo lugar<br>
+Sem pressa<br>
+Vou te encontrar, vou te encontrar<br>
+
+É tão linda<br>
+O jeito que leva<br>
+Tudo o que tem que acabar<br>
+Nossa sina<br>
+Nem tudo começa<br>
+Mas tudo tem que acabar<br>
+
+É tão linda<br>
+Nossa sina<br>
+
+Tenho pressa de viver<br>
+Tenho calma pra morrer<br>
+Eu não busco o fim<br>
+Mas sei que ele busca por mim<br>
+</p>
+
+            </div>
+        </section>
+
+        <!-- Imagens -->
+        <section class="galeria">
+            <h2>☾ Imagens ilustrativas ☽</h2>
+
+            <div class="imagens">
+                <img src="mort1.jpg" alt="Imagem ilustrativa 1">
+                <img src="mort2.jpg" alt="Imagem ilustrativa 2">
+                <img src="mort3.jpg" alt="Imagem ilustrativa 3">
+                <img src="mort4.jpg" alt="Imagem ilustrativa 4">
+            </div>
+        </section>
+
+        <!-- Vídeo -->
+        <section class="video">
+
+    <video autoplay muted loop playsinline>
+        <source src="video.Morte.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+</section>
+
+        <!-- Próxima página -->
+        <section class="proxima">
+            <a href="https://www.tiktok.com/@beadarte/video/7430962352201288965?is_from_webapp=1&sender_device=pc">☾ Veja também a Bea falando sobre a Morte! ⛤ <br>
+                (clique aqui!) 
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        const musica = document.getElementById("musica");
+        const capa = document.getElementById("capa");
+
+        musica.addEventListener("play", () => {
+            capa.classList.add("girando");
+        });
+
+        musica.addEventListener("pause", () => {
+            capa.classList.remove("girando");
+        });
+
+        musica.addEventListener("ended", () => {
+            capa.classList.remove("girando");
+        });
+    </script>
+
+</body>
+</html>

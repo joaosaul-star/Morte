@@ -1,0 +1,287 @@
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080405;
+    background-image:
+linear-gradient(rgba(8, 0, 2, 0.45), rgba(8, 0, 2, 0.60)),
+url("fundo-bruxa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #e8dada;
+    font-family: Georgia, serif;
+    padding: 30px;
+}
+
+/* Cabeçalho */
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid #740d20;
+    margin-bottom: 35px;
+}
+
+.simbolos {
+    color: #b00020;
+    font-size: 25px;
+    margin-bottom: 15px;
+    letter-spacing: 8px;
+}
+
+header h1 {
+    color: #b00020;
+    font-size: 55px;
+    text-shadow: 0 0 12px #57000d;
+}
+
+header h2 {
+    color: #d34a60;
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.subtitulo {
+    color: #c9a5ab;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+/* Player de música */
+
+.player-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 280px;
+    padding: 12px;
+
+    background-color: rgba(15, 5, 8, 0.96);
+    border: 1px solid #8b0015;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #35000b;
+}
+
+.player-musica img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.player-musica p {
+    color: #e05269;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.player-musica span {
+    display: block;
+    color: #c9a5ab;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.player-musica audio {
+    width: 170px;
+    height: 30px;
+}
+
+.girando {
+    animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Conteúdo principal */
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+section h2 {
+    color: #c52b46;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+/* Letra da música */
+
+
+.letra {
+    background-color: rgba(12, 4, 7, 0.9);
+    border: 1px solid #740d20;
+    border-radius: 8px;
+    padding: 25px;
+
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+
+
+.texto-letra {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.2;
+    white-space: pre-line;
+}
+
+.texto-letra p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Galeria 2x2 */
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.imagens img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border: 1px solid #8b0015;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.imagens img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #8b0015;
+}
+
+/* Vídeo */
+
+.video video {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+
+    border: 1px solid #8b0015;
+    border-radius: 8px;
+}
+
+/* Link da próxima música */
+
+.proxima {
+    text-align: center;
+}
+
+.proxima a {
+    display: inline-block;
+    padding: 14px 28px;
+
+    color: #e8a0ad;
+    background-color: #24070d;
+
+    border: 1px solid #a20d29;
+    border-radius: 6px;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.proxima a:hover {
+    background-color: #720d21;
+    color: white;
+    box-shadow: 0 0 12px #8b0015;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    color: #a72b41;
+    border-top: 1px solid #57000d;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* Responsividade para celular */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        padding-top: 150px;
+        background-attachment: scroll;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header h2 {
+        font-size: 23px;
+    }
+
+    .player-musica {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+
+    .player-musica audio {
+        max-width: 100%;
+    }
+
+    .imagens {
+        gap: 10px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .letra {
+        padding: 18px;
+    }
+}
